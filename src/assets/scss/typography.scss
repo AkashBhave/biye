@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&display=swap&subset=chinese-simplified");
+
+html,
+body {
+    font-family: "Lora";
+
+    [lang="zh"] {
+        font-family: "Noto Serif SC";
+    }
+
+    font-size: 1.1em;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+// Tailwind CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "typography";
+@import "colors";
+
+html,
+body {
+    background-color: $color-light;
+    color: $color-dark;
+
+    overflow-x: hidden;
+}
