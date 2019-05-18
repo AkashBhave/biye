@@ -1,6 +1,8 @@
 <template>
-    <div id="app" class="container mx-auto py-4">
-        <router-view/>
+    <div id="app" class="flex items-center h-screen">
+        <transition name="fade" mode="out-in">
+            <router-view/>
+        </transition>
     </div>
 </template>
 

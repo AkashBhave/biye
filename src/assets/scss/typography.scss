@@ -1,13 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Lora:400,700&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&display=swap&subset=chinese-simplified");
+@import url("https://fonts.googleapis.com/css?family=Overpass:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700&display=swap&subset=chinese-simplified");
 
 html,
 body {
-    font-family: "Lora";
-
-    [lang="zh"] {
-        font-family: "Noto Serif SC";
-    }
+    font-family: "Overpass", "Noto Sans SC", sans-serif;
 
     font-size: 1.1em;
 
