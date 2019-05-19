@@ -6,8 +6,14 @@
             <p>A choose-your-own-adventure Chinese review game.</p>
         </div>
         <div class="my-8">
-            <button @click="toStart()" class="btn btn-play text-light px-6 py-3 mx-4 text-3xl">开始</button>
-            <button @click="toCredits()" class="btn btn-play text-light px-6 py-3 mx-4 text-3xl">片头</button>
+            <button
+                @click="navigateStart()"
+                class="btn btn-intro text-light px-6 py-3 mx-4 text-3xl"
+            >开始</button>
+            <button
+                @click="navigateCredits()"
+                class="btn btn-intro text-light px-6 py-3 mx-4 text-3xl"
+            >片头</button>
         </div>
     </div>
 </template>
@@ -17,10 +23,10 @@ import router from "@/router";
 
 export default {
     methods: {
-        toStart() {
+        navigateStart() {
             router.push("start");
         },
-        toCredits() {
+        navigateCredits() {
             router.push("credits");
         }
     }
