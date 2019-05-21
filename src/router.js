@@ -5,6 +5,7 @@ import Router from "vue-router";
 import Intro from "@/views/Intro.vue";
 import Start from "@/views/Start.vue";
 import Credits from "@/views/Credits.vue";
+import Schedule from "@/views/Schedule.vue";
 
 Vue.use(Router);
 
@@ -24,6 +25,11 @@ export default new Router({
             path: "/credits",
             name: "credits",
             component: Credits
+        },
+        {
+            path: "/schedule",
+            name: "schedule",
+            component: Schedule
         }
     ]
 });
