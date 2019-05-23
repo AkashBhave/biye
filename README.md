@@ -17,6 +17,13 @@ An interactive, choose your own adventure game for practicing Chinese.
 -   After completing all the grades (从初一到高三), you get to choose what kind of college you want to go to.
 -   After choosing your college, you graduate. You win!
 
+### Questions
+
+- 6 years of questions.
+- 7 possible subjects.
+- User only selects 4 subjects.
+- Have to create 6 * 7 = 42 questions.
+
 ## Development
 
 ### Project setup

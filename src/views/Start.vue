@@ -38,7 +38,7 @@
             <input class="input-name text-xl my-4" type="text" v-model="name">
         </div>
         <div class="my-8" id="next">
-            <button @click="next()" class="btn btn-next px-6 py-3 text-light">下一次</button>
+            <button @click="next()" class="btn btn-next px-6 py-3 text-light">下一个</button>
         </div>
     </div>
 </template>
