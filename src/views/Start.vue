@@ -10,7 +10,7 @@
                 <p>{{ error }}</p>
             </div>
         </transition>
-        <div class="my-16" id="character">
+        <div class="my-8" id="character">
             <h1 class="mx-4 text-2xl font-bold">选你的 Character</h1>
             <div class="flex flex-initial w-6/12 mx-auto my-8">
                 <img
@@ -37,7 +37,7 @@
             <h1 class="mx-4 text-2xl font-bold">你的名字</h1>
             <input class="input-name text-xl my-4" type="text" v-model="name">
         </div>
-        <div class="my-16" id="next">
+        <div class="my-8" id="next">
             <button @click="next()" class="btn btn-next px-6 py-3 text-light">下一次</button>
         </div>
     </div>
