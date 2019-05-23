@@ -1,18 +1,12 @@
 <template>
     <div class="container mx-auto">
-        <transition name="fade">
-            <div
-                v-if="!check()"
-                class="bg-secondary border-l-4 border-primary text-tertiary my-8 p-4"
-                role="alert"
-            >
-                <p class="font-bold">Warning</p>
-                <p>{{ error }}</p>
-            </div>
-        </transition>
         <div class="my-8" id="character">
-            <h1 class="mx-4 text-2xl font-bold">选你的 Character</h1>
-            <div class="flex flex-initial w-6/12 mx-auto my-8">
+            <h1 class="mx-4 text-3xl font-bold">选你的角色</h1>
+            <h3 class="text-xl mx-2">
+                <span v-if="character === 'blue'" style="color: #a4c4ec">蓝色</span>
+                <span v-else-if="character === 'pink'" style="color: #f4b0c6">粉红色</span>
+            </h3>
+            <div class="flex flex-initial w-6/12 mx-auto my-4">
                 <img
                     @click="character = 'blue'"
                     @mouseover="blueHover = true"
@@ -28,13 +22,9 @@
                     :src="(pinkHover) ? pinkCharacterHover : pinkCharacter"
                 >
             </div>
-            <h2>
-                <span class="font-light">你的 Character：</span>
-                <span class="font-normal">{{ characterChinese }}</span>
-            </h2>
         </div>
-        <div class id="name">
-            <h1 class="mx-4 text-2xl font-bold">你的名字</h1>
+        <div class="my-8" id="name">
+            <h1 class="mx-4 text-3xl font-bold">你的名字</h1>
             <input class="input-name text-xl my-4" type="text" v-model="name">
         </div>
         <div class="my-8" id="next">
@@ -56,20 +46,17 @@ export default {
             pinkCharacterHover: require("../assets/img/characters/pink-surp.svg"),
             blueHover: false,
             pinkHover: false,
-            character: "",
-            error: ""
+            character: ""
         };
     },
     methods: {
-        setState() {},
         check() {
-            if (this.character.length === 0) {
-                this.error = "Please select a character";
+            if (this.character.length <= 0) {
+                alert("Please select a character");
                 return false;
             }
-
-            if (this.name.length === 0) {
-                this.error = "Please choose your name";
+            if (this.name.length <= 0) {
+                alert("Please choose your name");
                 return false;
             }
 
@@ -77,11 +64,9 @@ export default {
         },
         next() {
             if (this.check()) {
-                // Set state
                 this.$store.state.character = this.character;
                 this.$store.state.name = this.name;
 
-                // Change view
                 router.push("schedule");
             }
         }

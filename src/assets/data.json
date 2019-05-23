@@ -1,0 +1,32 @@
+{
+    "questions": [
+        {
+            "grade": 7,
+            "subjects": [
+                {
+                    "name": "math",
+                    "chineseName": "数学",
+                    "questions": [
+                        {
+                            "passage": "毛毛很喜欢音乐，但是不太喜欢数学。他觉得数学没有用。",
+                            "question": "毛毛喜欢数学吗？",
+                            "answers": ["毛毛很喜欢", "毛毛不喜欢"],
+                            "answer": "毛毛不喜欢"
+                        }
+                    ]
+                },
+                {
+                    "name": "history",
+                    "chineseName": "历史",
+                    "questions": [
+                        {
+                            "question": "World War 2 在历史里面学的。",
+                            "answers": ["对", "错"],
+                            "answer": "对"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

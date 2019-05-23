@@ -1,6 +1,6 @@
 <template>
     <div class="container mx-auto">
-        <div>
+        <div class="my-8">
             <img class="h-64 mx-auto" src="@/assets/img/logo/logo.png" alt>
             <h1 class="text-5xl font-bold">B&igrave; Y&egrave;</h1>
             <p>A choose-your-own-adventure Chinese review game.</p>
