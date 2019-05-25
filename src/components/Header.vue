@@ -1,5 +1,8 @@
 <template>
-    <div id="header" class="text-light bg-tertiary flex items-center justify-between h-12 px-2">
+    <div
+        id="header"
+        class="flex-grow-0 text-light bg-tertiary flex items-center justify-between h-12 px-2"
+    >
         <p>毕业</p>
         <div v-if="$store.state.name">
             <span
@@ -10,7 +13,7 @@
         </div>
     </div>
 </template>
-
+  
 
 
 <style lang="scss" scoped>

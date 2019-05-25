@@ -1,9 +1,9 @@
 <template>
     <div id="app" class="flex flex-col h-screen">
         <Header></Header>
-        <transition name="fade" mode="out-in">
-            <div class="flex flex-grow items-center mx-auto p-4" id="page">
-                <router-view/>
+        <transition name="fade" mode="out-in" class="w-auto">
+            <div class="w-full flex flex-grow items-center p-4" id="page">
+                <router-view class="mx-auto"/>
             </div>
         </transition>
     </div>

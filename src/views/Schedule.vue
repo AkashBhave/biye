@@ -1,17 +1,17 @@
 <template>
-    <div>
-        <div class="flex">
-            <div id="left-box" class="container flex-1">
-                <div class="box h-64"></div>
-            </div>
-            <div id="right-box" class="container flex-1">
-                <div class="box h-64">
-                    <div
-                        class="subject btn text-dark font-bold py-2 px-4 my-2 w-4/12 mx-auto"
-                        v-for="subject in getSubjects()"
-                        :key="subject"
-                    >{{ subject }}</div>
-                </div>
+    <div class="flex w-full">
+        <div id="left-box" class="flex-grow">
+            <p>TO HERE</p>
+            <div class="box h-64"></div>
+        </div>
+        <div id="right-box" class="flex-grow">
+            <p>FROM HERE</p>
+            <div class="box h-64">
+                <div
+                    class="mx-auto w-1/3 bg-secondary"
+                    v-for="subject in getSubjects()"
+                    :key="subject"
+                >{{ subject }}</div>
             </div>
         </div>
     </div>
@@ -47,9 +47,4 @@ export default {
 
 <style lang="scss" scoped>
 @import "node_modules/dragula/dist/dragula";
-
-.box .subject {
-    display: block;
-    border: 1px solid black;
-}
 </style>
