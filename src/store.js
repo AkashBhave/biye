@@ -5,7 +5,11 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        character: "",
+        character: {
+            name: "",
+            chineseName: "",
+            color: ""
+        },
         name: "",
         currentGrade: 7
     },

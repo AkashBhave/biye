@@ -3,23 +3,19 @@
         <div class="my-8" id="character">
             <h1 class="mx-4 text-3xl font-bold">选你的角色</h1>
             <h3 class="text-xl mx-2">
-                <span v-if="character === 'blue'" style="color: #a4c4ec">蓝色</span>
-                <span v-else-if="character === 'pink'" style="color: #f4b0c6">粉红色</span>
+                <span
+                    :style="'color: ' + charactersColor[characterIndex]"
+                >{{ charactersChinese[characterIndex] }}</span>
             </h3>
             <div class="flex my-4">
                 <img
-                    @click="character = 'blue'"
-                    @mouseover="blueHover = true"
-                    @mouseleave="blueHover = false"
+                    v-for="(c, index) in characters"
+                    :key="index"
+                    @click="characterIndex = index"
+                    @mouseover="setCharacterHover(index, true)"
+                    @mouseleave="setCharacterHover(index, false)"
                     class="flex-1 h-48 mx-6"
-                    :src="(blueHover) ? blueCharacterHover : blueCharacter"
-                >
-                <img
-                    @click="character = 'pink'"
-                    @mouseover="pinkHover = true"
-                    @mouseleave="pinkHover = false"
-                    class="flex-1 h-48 mx-6"
-                    :src="(pinkHover) ? pinkCharacterHover : pinkCharacter"
+                    :src="getCharacterImage(index)"
                 >
             </div>
         </div>
@@ -40,18 +36,34 @@ export default {
     data() {
         return {
             name: "",
-            blueCharacter: require("../assets/img/characters/blue.svg"),
-            pinkCharacter: require("../assets/img/characters/pink.svg"),
-            blueCharacterHover: require("../assets/img/characters/blue-surp.svg"),
-            pinkCharacterHover: require("../assets/img/characters/pink-surp.svg"),
-            blueHover: false,
-            pinkHover: false,
-            character: ""
+            characterIndex: -1,
+            characters: ["blue", "pink"],
+            charactersChinese: ["蓝色", "粉红色"],
+            charactersColor: ["#a4c4ec", "#f4b0c6"],
+            charactersHover: [false, false],
+            blueImg: require("../assets/img/characters/blue.svg")
         };
     },
     methods: {
+        getCharacterImage(index) {
+            let currentHover = this.charactersHover[index];
+            let currentCharacter = this.characters[index];
+
+            if (currentHover) {
+                return require("../assets/img/characters/" +
+                    currentCharacter +
+                    "-surp.svg");
+            } else {
+                return require("../assets/img/characters/" +
+                    currentCharacter +
+                    ".svg");
+            }
+        },
+        setCharacterHover(index, isHover) {
+            this.$set(this.charactersHover, index, isHover);
+        },
         check() {
-            if (this.character.length <= 0) {
+            if (this.characterIndex < 0) {
                 alert("Please select a character");
                 return false;
             }
@@ -64,8 +76,18 @@ export default {
         },
         next() {
             if (this.check()) {
-                this.$store.state.character = this.character;
+                // Add data to store
+                let characterIndex = this.characterIndex;
                 this.$store.state.name = this.name;
+                this.$store.state.character.name = this.characters[
+                    characterIndex
+                ];
+                this.$store.state.character.chineseName = this.charactersChinese[
+                    characterIndex
+                ];
+                this.$store.state.character.color = this.charactersColor[
+                    characterIndex
+                ];
 
                 router.push("schedule");
             }
@@ -78,7 +100,8 @@ export default {
             } else if (this.character == "pink") {
                 return "粉红色";
             }
-        }
+        },
+        characterColor() {}
     }
 };
 </script>
