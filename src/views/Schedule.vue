@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto">
+    <div>
         <div class="flex">
             <div id="left-box" class="container flex-1">
                 <div class="box h-64"></div>

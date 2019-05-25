@@ -1,24 +1,24 @@
 <template>
-    <div class="container mx-auto">
+    <div>
         <div class="my-8" id="character">
             <h1 class="mx-4 text-3xl font-bold">选你的角色</h1>
             <h3 class="text-xl mx-2">
                 <span v-if="character === 'blue'" style="color: #a4c4ec">蓝色</span>
                 <span v-else-if="character === 'pink'" style="color: #f4b0c6">粉红色</span>
             </h3>
-            <div class="flex flex-initial w-6/12 mx-auto my-4">
+            <div class="flex my-4">
                 <img
                     @click="character = 'blue'"
                     @mouseover="blueHover = true"
                     @mouseleave="blueHover = false"
-                    class="flex-1 h-48"
+                    class="flex-1 h-48 mx-6"
                     :src="(blueHover) ? blueCharacterHover : blueCharacter"
                 >
                 <img
                     @click="character = 'pink'"
                     @mouseover="pinkHover = true"
                     @mouseleave="pinkHover = false"
-                    class="flex-1 h-48"
+                    class="flex-1 h-48 mx-6"
                     :src="(pinkHover) ? pinkCharacterHover : pinkCharacter"
                 >
             </div>

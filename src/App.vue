@@ -1,7 +1,10 @@
 <template>
-    <div id="app" class="flex items-center h-screen">
+    <div id="app" class="flex flex-col h-screen">
+        <Header></Header>
         <transition name="fade" mode="out-in">
-            <router-view/>
+            <div class="flex flex-grow items-center mx-auto p-4" id="page">
+                <router-view/>
+            </div>
         </transition>
     </div>
 </template>
@@ -11,8 +14,12 @@
 </style>
 
 <script>
-import { log } from "util";
+import Header from "@/components/Header";
+
 export default {
+    components: {
+        Header
+    },
     mounted() {
         // Load data from data.json
         var data = require("@/assets/data.json");
