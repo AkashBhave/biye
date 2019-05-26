@@ -24,15 +24,19 @@
             <input class="input-name text-xl my-4" type="text" v-model="name">
         </div>
         <div class="my-8" id="next">
-            <button @click="next()" class="btn btn-next px-6 py-3 text-light">下一个</button>
+            <button-next @next="next()" buttonTitle="下一个"></button-next>
         </div>
     </div>
 </template>
 
 <script>
 import router from "@/router";
+import ButtonNext from "@/components/ButtonNext";
 
 export default {
+    components: {
+        ButtonNext
+    },
     data() {
         return {
             name: "",

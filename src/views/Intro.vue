@@ -8,11 +8,11 @@
         <div class="my-8">
             <button
                 @click="navigateStart()"
-                class="btn btn-next text-light px-6 py-3 mx-4 text-3xl"
+                class="btn btn-primary text-light px-6 py-3 mx-4 text-3xl"
             >开始</button>
             <button
                 @click="navigateCredits()"
-                class="btn btn-next text-light px-6 py-3 mx-4 text-3xl"
+                class="btn btn-primary text-light px-6 py-3 mx-4 text-3xl"
             >片头</button>
         </div>
     </div>

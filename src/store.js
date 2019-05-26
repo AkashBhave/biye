@@ -11,7 +11,8 @@ export default new Vuex.Store({
             color: ""
         },
         name: "",
-        currentGrade: 7
+        currentGrade: 7,
+        classes: []
     },
     mutations: {},
     actions: {}
