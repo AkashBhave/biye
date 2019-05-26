@@ -12,7 +12,7 @@ export default new Vuex.Store({
         },
         name: "",
         currentGrade: 7,
-        currentScore: -1,
+        currentScore: null,
         scores: [],
         classes: []
     },

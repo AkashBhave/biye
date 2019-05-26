@@ -1,7 +1,8 @@
 <template>
     <div class="flex flex-col w-full">
-        <div class="flex mx-auto my-6">
-            <h1 class="text-3xl font-bold">第{{ currentSubject + 1 }}个问题</h1>
+        <div class="flex flex-col mx-auto my-6">
+            <h1 class="flex text-3xl font-bold">第{{ currentSubject + 1 }}个问题</h1>
+            <h5 class="flex mx-auto">{{ currentQuestionPoints }}分</h5>
         </div>
         <div class="mx-auto my-4">
             <img class="h-24" :src="getCharacterImage()" alt>
@@ -58,7 +59,8 @@ export default {
             currentSubject: 0,
             currentResponseIndex: -1,
             characterImageExt: "",
-            responseIsCorrect: null
+            responseIsCorrect: null,
+            currentQuestionPoints: 0
         };
     },
     methods: {
@@ -82,7 +84,15 @@ export default {
                 Math.random() * currentSubject.questions.length
             );
 
-            return currentSubject.questions[questionIndex];
+            let currentQuestion = currentSubject.questions[questionIndex];
+
+            if (currentQuestion.passage) {
+                this.currentQuestionPoints = 15;
+            } else {
+                this.currentQuestionPoints = 10;
+            }
+
+            return currentQuestion;
         },
         getCharacterImage() {
             let character = this.$store.state.character.name;
@@ -92,9 +102,11 @@ export default {
                 ".svg");
         },
         handleNext() {
-            this.responseIsCorrect != null ? this.next() : this.submit();
+            this.responseIsCorrect != null
+                ? this.nextQuestion()
+                : this.submitQuestion();
         },
-        submit() {
+        submitQuestion() {
             let vm = this;
 
             if (!this.currentResponseIndex < 0) {
@@ -104,24 +116,32 @@ export default {
                 if (correctResponse === this.currentResponseIndex) {
                     vm.characterImageExt = "-stand";
                     vm.responseIsCorrect = true;
+                    vm.$store.state.currentScore += vm.currentQuestionPoints;
                 } else {
                     vm.characterImageExt = "-sad";
                     vm.responseIsCorrect = false;
                 }
             }
         },
-        next() {
+        nextQuestion() {
+            // Reset question specific variables
             this.currentResponseIndex = -1;
             this.characterImageExt = "";
             this.responseIsCorrect = null;
 
             if (this.currentSubject + 1 === this.$store.state.classes.length) {
                 this.currentSubject = 0;
-                alert("END OF GRADE");
+                this.next();
             } else {
                 this.currentSubject += 1;
             }
+        },
+        next() {
+            this.$store.state.scores.push(this.currentScore);
         }
+    },
+    mounted() {
+        this.$store.state.currentScore = 0;
     }
 };
 </script>
