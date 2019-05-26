@@ -58,3 +58,33 @@ button:focus {
         top: 6px;
     }
 }
+.btn-tertiary {
+    background: $color-tertiary;
+    box-shadow: 0 6px darken($color-tertiary, $amount: 10%);
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+
+    &:hover {
+        box-shadow: 0 4px darken($color-tertiary, $amount: 10%);
+        top: 2px;
+    }
+
+    &:active {
+        box-shadow: 0 0 darken($color-tertiary, $amount: 10%);
+        top: 6px;
+    }
+}
+.btn-disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:hover {
+        box-shadow: none !important;
+        top: 0px !important;
+    }
+
+    &:active {
+        box-shadow: none !important;
+        top: 0px !important;
+    }
+}

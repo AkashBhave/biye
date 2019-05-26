@@ -32,7 +32,9 @@
 </template>
 
 <script>
+import router from "@/router";
 import dragula from "dragula";
+
 import ButtonNext from "@/components/ButtonNext";
 
 export default {
@@ -71,6 +73,8 @@ export default {
         next() {
             if (this.check()) {
                 this.$store.state.classes = this.classes;
+
+                router.push("question");
             }
         }
     },

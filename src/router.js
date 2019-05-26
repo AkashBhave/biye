@@ -2,10 +2,11 @@ import Vue from "vue";
 import Router from "vue-router";
 
 // Views
-import Intro from "@/views/Intro.vue";
-import Start from "@/views/Start.vue";
-import Credits from "@/views/Credits.vue";
-import Schedule from "@/views/Schedule.vue";
+import Intro from "@/views/Intro";
+import Start from "@/views/Start";
+import Credits from "@/views/Credits";
+import Schedule from "@/views/Schedule";
+import Question from "@/views/Question";
 
 Vue.use(Router);
 
@@ -30,6 +31,11 @@ export default new Router({
             path: "/schedule",
             name: "schedule",
             component: Schedule
+        },
+        {
+            path: "/question",
+            name: "question",
+            component: Question
         }
     ]
 });

@@ -12,6 +12,8 @@ export default new Vuex.Store({
         },
         name: "",
         currentGrade: 7,
+        currentScore: -1,
+        scores: [],
         classes: []
     },
     mutations: {},
