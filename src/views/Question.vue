@@ -139,7 +139,7 @@ export default {
             }
         },
         next() {
-            router.push("end-grade");
+            router.push("/end-grade");
         }
     },
     mounted() {

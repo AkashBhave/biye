@@ -24,10 +24,10 @@ import router from "@/router";
 export default {
     methods: {
         navigateStart() {
-            router.push("start");
+            router.push("/start");
         },
         navigateCredits() {
-            router.push("credits");
+            router.push("/credits");
         }
     }
 };

@@ -76,13 +76,13 @@ export default {
         },
         next() {
             if (this.isGraduated) {
-                router.push("end-game");
+                router.push("/end-game");
             } else {
                 if (this.isPassed) {
                     this.$store.state.currentGrade += 1;
-                    router.push("schedule");
+                    router.push("/schedule");
                 } else {
-                    router.push("schedule");
+                    router.push("/schedule");
                 }
             }
         }
@@ -105,7 +105,7 @@ export default {
         this.$store.state.currentScore = null;
 
         // Determine whether to send to the graduate screen or not
-        this.isGraduated = this.$store.state.currentGrade === 8;
+        this.isGraduated = this.$store.state.currentGrade === 12;
     }
 };
 </script>

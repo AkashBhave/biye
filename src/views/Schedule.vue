@@ -74,7 +74,7 @@ export default {
             if (this.check()) {
                 this.$store.state.classes = this.classes;
 
-                router.push("question");
+                router.push("/question");
             }
         }
     },

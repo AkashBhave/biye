@@ -95,7 +95,7 @@ export default {
 
                 this.$store.state.currentGrade = 7;
 
-                router.push("schedule");
+                router.push("/schedule");
             }
         }
     },
