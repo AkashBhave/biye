@@ -34,7 +34,8 @@ export default {
     data() {
         return {
             isPassed: null,
-            currentScore: null
+            currentScore: null,
+            isGraduated: null
         };
     },
     methods: {
@@ -63,18 +64,26 @@ export default {
         getButtonText() {
             let vm = this;
 
-            if (this.isPassed) {
-                return "开始上" + vm.getNextGradeChinese() + "年级";
+            if (this.isGraduated) {
+                return "毕业";
             } else {
-                return "复读上" + vm.getCurrentGradeChinese() + "年级";
+                if (this.isPassed) {
+                    return "开始上" + vm.getNextGradeChinese() + "年级";
+                } else {
+                    return "复读上" + vm.getCurrentGradeChinese() + "年级";
+                }
             }
         },
         next() {
-            if (this.isPassed) {
-                this.$store.state.currentGrade += 1;
-                router.push("schedule");
+            if (this.isGraduated) {
+                router.push("end-game");
             } else {
-                router.push("schedule");
+                if (this.isPassed) {
+                    this.$store.state.currentGrade += 1;
+                    router.push("schedule");
+                } else {
+                    router.push("schedule");
+                }
             }
         }
     },
@@ -86,9 +95,17 @@ export default {
         let currentScore = this.$store.state.currentScore;
         this.isPassed = currentScore >= requiredScore;
 
+        // Add to the list of scores if user passed
+        if (this.isPassed) {
+            this.$store.state.scores.push(currentScore);
+        }
+
         // Clear current grade's score
         this.currentScore = currentScore;
         this.$store.state.currentScore = null;
+
+        // Determine whether to send to the graduate screen or not
+        this.isGraduated = this.$store.state.currentGrade === 8;
     }
 };
 </script>

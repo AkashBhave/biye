@@ -139,7 +139,6 @@ export default {
             }
         },
         next() {
-            this.$store.state.scores.push(this.$store.state.currentScore);
             router.push("end-grade");
         }
     },

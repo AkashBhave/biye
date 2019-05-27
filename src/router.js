@@ -8,6 +8,7 @@ import Credits from "@/views/Credits";
 import Schedule from "@/views/Schedule";
 import Question from "@/views/Question";
 import EndGrade from "@/views/EndGrade";
+import EndGame from "@/views/EndGame";
 
 Vue.use(Router);
 
@@ -42,6 +43,11 @@ export default new Router({
             path: "/end-grade",
             name: "end-grade",
             component: EndGrade
+        },
+        {
+            path: "/end-game",
+            name: "end-game",
+            component: EndGame
         }
     ]
 });
