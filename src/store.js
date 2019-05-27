@@ -11,9 +11,11 @@ export default new Vuex.Store({
             color: ""
         },
         name: "",
-        currentGrade: 7,
+        currentGrade: null,
+        gradesChinese: ["初一", "初二", "初三", "高一", "高二", "高三"],
         currentScore: null,
         scores: [],
+        requiredScores: [10, 15, 20, 25, 30, 35, 40],
         classes: []
     },
     mutations: {},

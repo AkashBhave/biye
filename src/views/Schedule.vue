@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="flex mx-auto my-8">
-            <button-next @next="next()" buttonTitle="下一个"></button-next>
+            <button-next @next="next()" button-title="下一个"></button-next>
         </div>
     </div>
 </template>

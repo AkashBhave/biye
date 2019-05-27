@@ -41,13 +41,15 @@
         <div class="flex mx-auto my-6">
             <button-next
                 @next="handleNext()"
-                :buttonTitle="(responseIsCorrect != null) ? '下一个' : 'Submit'"
+                :button-title="(responseIsCorrect != null) ? '下一个问题' : '提交答案'"
             ></button-next>
         </div>
     </div>
 </template>
 
 <script>
+import router from "@/router";
+
 import ButtonNext from "@/components/ButtonNext";
 
 export default {
@@ -137,7 +139,8 @@ export default {
             }
         },
         next() {
-            this.$store.state.scores.push(this.currentScore);
+            this.$store.state.scores.push(this.$store.state.currentScore);
+            router.push("end-grade");
         }
     },
     mounted() {

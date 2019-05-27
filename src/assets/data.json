@@ -84,6 +84,91 @@
                     ]
                 }
             ]
+        },
+        {
+            "grade": 8,
+            "subjects": [
+                {
+                    "key": "math",
+                    "chineseName": "数学",
+                    "questions": [
+                        {
+                            "passage": "妈妈从来不做数学因为他不上学。他对数学不感兴趣。",
+                            "question": "妈妈的兴趣是什么？",
+                            "answers": ["数学", "英语", "我们不知道"],
+                            "answerIndex": 2
+                        }
+                    ]
+                },
+                {
+                    "key": "english",
+                    "chineseName": "英语",
+                    "questions": [
+                        {
+                            "question": "陈老师教英语吗？",
+                            "answers": ["教", "不教"],
+                            "answerIndex": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "music",
+                    "chineseName": "音乐",
+                    "questions": [
+                        {
+                            "question": "TJ有音乐课吗？",
+                            "answers": ["有", "没有"],
+                            "answerIndex": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "geography",
+                    "chineseName": "地理",
+                    "questions": [
+                        {
+                            "passage": "好天很喜欢他的地理老师，花老师。花老师对她的学生很好。",
+                            "question": "好天为什么喜欢花老师？",
+                            "answers": ["花老师很漂亮", "花老师对他的学生很好", "花老师教数学"],
+                            "answerIndex": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "german",
+                    "chineseName": "德语",
+                    "questions": [
+                        {
+                            "question": "你上德语吗？",
+                            "answers": ["上", "不上"],
+                            "answerIndex": 1
+                        }
+                    ]
+                },
+                {
+                    "key": "science",
+                    "chineseName": "科学",
+                    "questions": [
+                        {
+                            "question": "我们上一个科学学校。",
+                            "answers": ["对", "错"],
+                            "answerIndex": 0
+                        }
+                    ]
+                },
+                {
+                    "key": "law",
+                    "chineseName": "法律",
+                    "questions": [
+                        {
+                            "passage": "爸爸说法律很有趣。我觉得他错。",
+                            "question": "他觉得法律有趣吗？",
+                            "answers": ["很有趣", "没有趣"],
+                            "answerIndex": 1
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }

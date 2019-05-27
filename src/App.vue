@@ -1,6 +1,6 @@
 <template>
     <div id="app" class="flex flex-col h-screen">
-        <Header></Header>
+        <the-header></the-header>
         <transition name="fade" mode="out-in" class="w-auto">
             <div class="w-full flex flex-grow items-center p-4" id="page">
                 <router-view class="mx-auto"/>
@@ -14,11 +14,11 @@
 </style>
 
 <script>
-import Header from "@/components/Header";
+import TheHeader from "@/components/TheHeader";
 
 export default {
     components: {
-        Header
+        TheHeader
     },
     mounted() {
         // Load data from data.json

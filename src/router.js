@@ -7,6 +7,7 @@ import Start from "@/views/Start";
 import Credits from "@/views/Credits";
 import Schedule from "@/views/Schedule";
 import Question from "@/views/Question";
+import EndGrade from "@/views/EndGrade";
 
 Vue.use(Router);
 
@@ -36,6 +37,11 @@ export default new Router({
             path: "/question",
             name: "question",
             component: Question
+        },
+        {
+            path: "/end-grade",
+            name: "end-grade",
+            component: EndGrade
         }
     ]
 });

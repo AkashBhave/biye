@@ -24,7 +24,7 @@
             <input class="input-name text-xl my-4" type="text" v-model="name">
         </div>
         <div class="my-8" id="next">
-            <button-next @next="next()" buttonTitle="下一个"></button-next>
+            <button-next @next="next()" button-title="下一个"></button-next>
         </div>
     </div>
 </template>
@@ -92,6 +92,8 @@ export default {
                 this.$store.state.character.color = this.charactersColor[
                     characterIndex
                 ];
+
+                this.$store.state.currentGrade = 7;
 
                 router.push("schedule");
             }
