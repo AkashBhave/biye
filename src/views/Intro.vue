@@ -13,7 +13,7 @@
             <button
                 @click="navigateCredits()"
                 class="btn btn-primary text-light px-6 py-3 mx-4 text-3xl"
-            >片头</button>
+            >创作者</button>
         </div>
     </div>
 </template>
