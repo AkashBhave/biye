@@ -105,7 +105,7 @@ export default {
         this.$store.state.currentScore = null;
 
         // Determine whether to send to the graduate screen or not
-        this.isGraduated = this.$store.state.currentGrade === 122;
+        this.isGraduated = this.$store.state.currentGrade === 12;
     }
 };
 </script>
