@@ -39,10 +39,7 @@
             >{{ (responseIsCorrect) ? "CORRECT" : "INCORRECT" }}</h5>
         </div>
         <div class="flex mx-auto my-6">
-            <button-next
-                @next="handleNext()"
-                :button-title="(responseIsCorrect != null) ? '下一个问题' : '提交答案'"
-            ></button-next>
+            <button-next @next="handleNext()" :button-title="getButtonTitle()"></button-next>
         </div>
     </div>
 </template>
@@ -78,6 +75,20 @@ export default {
                 ) {
                     return subjects[subjectIndex];
                 }
+            }
+        },
+        getButtonTitle() {
+            if (this.responseIsCorrect != null) {
+                if (
+                    this.currentSubject + 1 ===
+                    this.$store.state.classes.length
+                ) {
+                    return "下一个";
+                } else {
+                    return "下一个问题";
+                }
+            } else {
+                return "提交答案";
             }
         },
         getCurrentQuestion() {
