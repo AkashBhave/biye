@@ -64,26 +64,26 @@ export default {
         getButtonText() {
             let vm = this;
 
-            if (this.isGraduated) {
-                return "毕业";
-            } else {
-                if (this.isPassed) {
-                    return "开始上" + vm.getNextGradeChinese() + "年级";
+            if (this.isPassed) {
+                if (this.isGraduated) {
+                    return "毕业";
                 } else {
-                    return "复读上" + vm.getCurrentGradeChinese() + "年级";
+                    return "开始上" + vm.getNextGradeChinese() + "年级";
                 }
+            } else {
+                return "复读上" + vm.getCurrentGradeChinese() + "年级";
             }
         },
         next() {
-            if (this.isGraduated) {
-                router.push("/end-game");
-            } else {
-                if (this.isPassed) {
+            if (this.isPassed) {
+                if (this.isGraduated) {
+                    router.push("/end-game");
+                } else {
                     this.$store.state.currentGrade += 1;
                     router.push("/schedule");
-                } else {
-                    router.push("/schedule");
                 }
+            } else {
+                router.push("/schedule");
             }
         }
     },
@@ -105,7 +105,7 @@ export default {
         this.$store.state.currentScore = null;
 
         // Determine whether to send to the graduate screen or not
-        this.isGraduated = this.$store.state.currentGrade === 12;
+        this.isGraduated = this.$store.state.currentGrade === 122;
     }
 };
 </script>

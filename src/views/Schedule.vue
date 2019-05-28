@@ -1,9 +1,9 @@
 <template>
     <div class="flex flex-col w-full">
-        <div class="flex mx-auto my-8">
+        <div class="flex mx-auto my-4">
             <h1 class="mx-4 text-3xl font-bold">选你的时间表</h1>
         </div>
-        <div class="flex my-8">
+        <div class="flex my-4">
             <div class="flex-grow">
                 <h3 class="text-xl">
                     你的时间表
@@ -18,14 +18,14 @@
                 <h3 class="text-xl">你可以学：</h3>
                 <div id="left-box" class="box">
                     <div
-                        class="block mx-auto w-1/3 py-2 my-4 btn btn-secondary"
+                        class="block text-sm mx-auto w-1/3 py-2 my-4 btn btn-secondary"
                         v-for="subject in getSubjects()"
                         :key="subject"
                     >{{ subject }}</div>
                 </div>
             </div>
         </div>
-        <div class="flex mx-auto my-8">
+        <div class="flex mx-auto my-4">
             <button-next @next="next()" button-title="下一个"></button-next>
         </div>
     </div>
