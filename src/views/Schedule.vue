@@ -88,9 +88,9 @@ export default {
 
         // Set on-drop functionality
         drake.on("drop", function(el, target, source, sibling) {
-            if (target.id === "right-box") {
+            if (target.id === "right-box" && source.id === "left-box") {
                 vm.classes.push(el.innerHTML);
-            } else if (target.id === "left-box") {
+            } else if (target.id === "left-box" && source.id === "right-box") {
                 vm.classes.pop(el.innerHTML);
             }
         });
