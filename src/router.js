@@ -4,6 +4,7 @@ import Router from "vue-router";
 // Views
 import Intro from "@/views/Intro";
 import Start from "@/views/Start";
+import Handout from "@/views/Handout";
 import Credits from "@/views/Credits";
 import Schedule from "@/views/Schedule";
 import Question from "@/views/Question";
@@ -28,6 +29,11 @@ export default new Router({
             path: "/credits",
             name: "credits",
             component: Credits
+        },
+        {
+            path: "/handout",
+            name: "handout",
+            component: Handout
         },
         {
             path: "/schedule",

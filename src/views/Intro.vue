@@ -14,6 +14,10 @@
                 @click="navigateCredits()"
                 class="btn btn-primary text-light px-6 py-3 mx-4 text-3xl"
             >创作者</button>
+            <button
+                @click="navigateHandout()"
+                class="btn btn-primary text-light px-6 py-3 mx-4 text-3xl"
+            >Handout</button>
         </div>
     </div>
 </template>
@@ -28,6 +32,9 @@ export default {
         },
         navigateCredits() {
             router.push("/credits");
+        },
+        navigateHandout() {
+            router.push("/handout");
         }
     }
 };
