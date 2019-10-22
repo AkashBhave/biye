@@ -43,18 +43,18 @@
                     "questions": [
                         {
                             "passage": "地理是好天的第三节课。音乐课在地理课之后。",
-                            "question": "好天的第四课是什么？",
-                            "answers": ["外语", "英语", "地理"],
+                            "question": "好天的第四节课是什么？",
+                            "answers": ["外语", "英语", "音乐"],
                             "answerIndex": 2
                         }
                     ]
                 },
                 {
                     "key": "martialarts",
-                    "chineseName": "美术",
+                    "chineseName": "武术",
                     "questions": [
                         {
-                            "question": "画画是美术吗？",
+                            "question": "画画是武术吗？",
                             "answers": ["是", "不是"],
                             "answerIndex": 1
                         }
@@ -77,7 +77,7 @@
                     "questions": [
                         {
                             "passage": "好天上数学，音乐，和戏剧。",
-                            "question": "好天上应约课吗？",
+                            "question": "好天上音乐课吗？",
                             "answers": ["不上", "上"],
                             "answerIndex": 1
                         }
@@ -93,7 +93,7 @@
                     "chineseName": "数学",
                     "questions": [
                         {
-                            "passage": "妈妈从来不做数学因为他不上学。他对数学不感兴趣。",
+                            "passage": "妈妈从来不做数学，因为他不上学。她对数学不感兴趣。",
                             "question": "妈妈的兴趣是什么？",
                             "answers": ["数学", "英语", "我们不知道"],
                             "answerIndex": 2
@@ -129,7 +129,7 @@
                         {
                             "passage": "好天很喜欢他的地理老师，花老师。花老师对她的学生很好。",
                             "question": "好天为什么喜欢花老师？",
-                            "answers": ["花老师很漂亮", "花老师对他的学生很好", "花老师教数学"],
+                            "answers": ["花老师很漂亮", "花老师对她的学生很好", "花老师教数学"],
                             "answerIndex": 1
                         }
                     ]
@@ -162,7 +162,7 @@
                     "questions": [
                         {
                             "passage": "爸爸说法律很有趣。我觉得他错。",
-                            "question": "他觉得法律有趣吗？",
+                            "question": "我觉得法律有趣吗？",
                             "answers": ["很有趣", "没有趣"],
                             "answerIndex": 1
                         }
@@ -202,7 +202,7 @@
                     "chineseName": "中文",
                     "questions": [
                         {
-                            "question": "如果我是法国人，中文对我室外语。",
+                            "question": "如果我是法国人，中文对我是外语。",
                             "answers": ["对", "错"],
                             "answerIndex": 0
                         }
@@ -235,7 +235,7 @@
                     "chineseName": "科学",
                     "questions": [
                         {
-                            "passage": "Akash说科学很好玩因为他的老师对他很好。",
+                            "passage": "Akash说科学很好玩，因为他的老师对他很好。",
                             "question": "Akash的老师对他好还是不好？",
                             "answers": ["很好", "不太好"],
                             "answerIndex": 0
@@ -248,7 +248,7 @@
                     "questions": [
                         {
                             "question": "中国在哪儿？",
-                            "answers": ["Europe", "Asia", "Americas"],
+                            "answers": ["欧洲", "亚洲", "美洲"],
                             "answerIndex": 1
                         }
                     ]
@@ -263,7 +263,7 @@
                     "chineseName": "化学",
                     "questions": [
                         {
-                            "question": "是年级是高一吗？",
+                            "question": "年级是高一吗？",
                             "answers": ["是", "不是"],
                             "answerIndex": 0
                         }
@@ -286,7 +286,7 @@
                     "chineseName": "生物",
                     "questions": [
                         {
-                            "question": "谁叫生物？",
+                            "question": "谁教生物？",
                             "answers": ["Fisher老师", "陈老师", "Osborne老师"],
                             "answerIndex": 0
                         }
@@ -298,7 +298,7 @@
                     "questions": [
                         {
                             "passage": "学生十年级以后就不用上体育课了。",
-                            "question": "你今年咬伤体育课吗？",
+                            "question": "你今年要上体育课吗？",
                             "answers": ["要", "不要"],
                             "answerIndex": 0
                         }
@@ -320,7 +320,7 @@
                     "chineseName": "数学",
                     "questions": [
                         {
-                            "question": "在TJ里，学生一定要上哪一节数学课？",
+                            "question": "在TJ里，学生一定要上哪一门数学课？",
                             "answers": ["Multi-variable Calculus", "Linear Algebra", "Single-variable Calculus"],
                             "answerIndex": 2
                         }
@@ -431,7 +431,7 @@
                     "questions": [
                         {
                             "passage": "好天很喜欢英语，但是他觉得没有用。",
-                            "question": "英语对好天有用吗？",
+                            "question": "好天觉得英语有用吗？",
                             "answers": ["有", "没有"],
                             "answerIndex": 1
                         }
@@ -487,7 +487,7 @@
                     "questions": [
                         {
                             "question": "India在哪儿？",
-                            "answers": ["Asia", "Europe", "Australia"],
+                            "answers": ["亚洲", "欧洲", "澳大利亚"],
                             "answerIndex": 0
                         }
                     ]
